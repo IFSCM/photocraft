@@ -145,6 +145,11 @@ jobs:
     permissions:
       contents: write
     steps:
+      - name: Check out PhotoCraft
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
       - name: Download Linux installers
         uses: actions/download-artifact@v8
         with:
